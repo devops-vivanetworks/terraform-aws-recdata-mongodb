@@ -60,10 +60,10 @@ variable "instance_type" {
   type        = "string"
 }
 
-variable "ssm_policy_arn" {
-  type        = "string"
-  description = "SSM access policy arn to attach to instance profile"
-}
+# variable "ssm_policy_arn" {
+#   type        = "string"
+#   description = "SSM access policy arn to attach to instance profile"
+# }
 
 variable "kms_key_arn" {
   description = "arn or kms key used to encryp and decrypt value on parameter store"

@@ -3,16 +3,15 @@ provider "aws" {
   region  = "ap-southeast-1"
 }
 
-module "mchdata_mongodb_example" {
+module "recdata_mongodb_example" {
   source = "../.."
 
   environment = "${local.environment}"
-  vpc_id      = "vpc-0323ed6430adec3a4"
-
-  ssm_policy_arn  = "arn:aws:iam::517530806209:policy/CommonSSMPolicy"
+  vpc_id      = "vpc-0eb526c7801ad425c"
+  # ssm_policy_arn  = "arn:aws:iam::517530806209:policy/CommonSSMPolicy"
   kms_key_arn     = "arn:aws:kms:ap-southeast-1:517530806209:key/6e392cb9-6e65-4c03-ad84-2bdbd6ef4967"
   
-  is_volume_backup_enabled  = "true"
+  is_volume_backup_enabled  = "false"
   lambda_volume_backup_arn  = "arn:aws:lambda:ap-southeast-1:460124681500:function:tsiavbs_volume_backup_lambda-1dc7ae8ff875cc93"
   lambda_volume_backup_name = "tsiavbs_volume_backup_lambda-1dc7ae8ff875cc93"
 

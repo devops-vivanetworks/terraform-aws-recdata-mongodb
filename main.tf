@@ -9,7 +9,7 @@ module "loggroup" {
 
 # CLUSTER
 module "mongodb_cluster" {
-  source                    = "git@github.com:traveloka/terraform-aws-mongodb?ref=v1.0.1"
+  source                    = "git@github.com:traveloka/terraform-aws-mongodb?ref=v1.2.2"
   service_name              = "${local.service_name}"
   application               = "${local.application}"
   ebs_volume_ids            = "${local.ebs_volume_ids}"
@@ -33,11 +33,11 @@ module "mongodb_cluster" {
 }
 
 
-# IAM Policy
-resource "aws_iam_role_policy_attachment" "mongodb_cluster_ssm_policy" {
-  role       = "${module.mongodb_cluster.instance_iam_role_name}"
-  policy_arn = "${var.ssm_policy_arn}"
-}
+# # IAM Policy
+# resource "aws_iam_role_policy_attachment" "mongodb_cluster_ssm_policy" {
+#   role       = "${module.mongodb_cluster.instance_iam_role_name}"
+#   policy_arn = "${var.ssm_policy_arn}"
+# }
 resource "aws_iam_role_policy_attachment" "commonEC2_attachment" {
   role       = "${module.mongodb_cluster.instance_iam_role_name}"
   policy_arn = "arn:aws:iam::156826959081:policy/CommonEC2"
