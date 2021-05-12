@@ -8,7 +8,7 @@ module "recdata_mongodb_example" {
 
   environment = "${local.environment}"
   vpc_id      = "vpc-0eb526c7801ad425c"
-  # ssm_policy_arn  = "arn:aws:iam::517530806209:policy/CommonSSMPolicy"
+  ssm_policy_arn  = "arn:aws:iam::517530806209:policy/CommonSSMPolicy"
   kms_key_arn     = "arn:aws:kms:ap-southeast-1:517530806209:key/6e392cb9-6e65-4c03-ad84-2bdbd6ef4967"
   
   is_volume_backup_enabled  = "false"

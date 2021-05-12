@@ -33,11 +33,11 @@ module "mongodb_cluster" {
 }
 
 
-# # IAM Policy
-# resource "aws_iam_role_policy_attachment" "mongodb_cluster_ssm_policy" {
-#   role       = "${module.mongodb_cluster.instance_iam_role_name}"
-#   policy_arn = "${var.ssm_policy_arn}"
-# }
+# IAM Policy
+resource "aws_iam_role_policy_attachment" "mongodb_cluster_ssm_policy" {
+  role       = "${module.mongodb_cluster.instance_iam_role_name}"
+  policy_arn = "${var.ssm_policy_arn}"
+}
 resource "aws_iam_role_policy_attachment" "commonEC2_attachment" {
   role       = "${module.mongodb_cluster.instance_iam_role_name}"
   policy_arn = "arn:aws:iam::920829394025:policy/CommonEC2"
