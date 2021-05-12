@@ -40,7 +40,7 @@ module "mongodb_cluster" {
 # }
 resource "aws_iam_role_policy_attachment" "commonEC2_attachment" {
   role       = "${module.mongodb_cluster.instance_iam_role_name}"
-  policy_arn = "arn:aws:iam::156826959081:policy/CommonEC2"
+  policy_arn = "arn:aws:iam::920829394025:policy/CommonEC2"
 }
 
 # Volumes
