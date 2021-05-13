@@ -1,5 +1,5 @@
 locals {
-  service_name   = "recdata_3_2"
+  service_name   = "recdata"
   product_domain = "rec"
   application    = "mongodb-3.6"
 
