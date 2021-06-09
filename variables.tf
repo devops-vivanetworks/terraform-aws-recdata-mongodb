@@ -84,3 +84,8 @@ variable "mongodb_volume_size" {
   type        = "string"
   description = "The volume size of mongodb"
 }
+variable "ec2_policy_arn" {
+  type        = "string"
+  description = "EC2 access policy arn to attach to instance profile"
+}
+
