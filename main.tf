@@ -45,7 +45,7 @@ resource "aws_iam_role_policy_attachment" "commonEC2_attachment" {
 
 # Volumes
 module "recdata_volume_mongodb_01" {
-  source                     = "git@github.com:traveloka/terraform-aws-mongodb//modules/mongodb-volume?ref=v1.0.1"
+  source                     = "git@github.com:traveloka/terraform-aws-mongodb//modules/mongodb-volume?ref=v1.2.0"
   mongodb_volume_size        = "${var.mongodb_volume_size}"
   product_domain             = "${local.product_domain}"
   service_name               = "${local.service_name}"
@@ -59,10 +59,11 @@ module "recdata_volume_mongodb_01" {
   weekly_retention           = "${var.weekly_retention}"
   monthly_retention          = "${var.monthly_retention}"
   yearly_retention           = "${var.yearly_retention}"
+  tags     = "${var.additional_ebs_tags}"
 }
 
 module "recdata_volume_mongodb_02" {
-  source                     = "git@github.com:traveloka/terraform-aws-mongodb//modules/mongodb-volume?ref=v1.0.1"
+  source                     = "git@github.com:traveloka/terraform-aws-mongodb//modules/mongodb-volume?ref=v1.2.0"
   mongodb_volume_size        = "${var.mongodb_volume_size}"
   product_domain             = "${local.product_domain}"
   service_name               = "${local.service_name}"
@@ -75,11 +76,12 @@ module "recdata_volume_mongodb_02" {
   daily_retention            = "${var.daily_retention}"
   weekly_retention           = "${var.weekly_retention}"
   monthly_retention          = "${var.monthly_retention}"
-  yearly_retention           = "${var.yearly_retention}"  
+  yearly_retention           = "${var.yearly_retention}" 
+  tags     = "${var.additional_ebs_tags}" 
 }
 
 module "recdata_volume_mongodb_03" {
-  source                     = "git@github.com:traveloka/terraform-aws-mongodb//modules/mongodb-volume?ref=v1.0.1"
+  source                     = "git@github.com:traveloka/terraform-aws-mongodb//modules/mongodb-volume?ref=v1.2.0"
   mongodb_volume_size        = "${var.mongodb_volume_size}"
   product_domain             = "${local.product_domain}"
   service_name               = "${local.service_name}"
@@ -93,6 +95,7 @@ module "recdata_volume_mongodb_03" {
   weekly_retention           = "${var.weekly_retention}"
   monthly_retention          = "${var.monthly_retention}"
   yearly_retention           = "${var.yearly_retention}"
+  tags     = "${var.additional_ebs_tags}"
 }
 
 
