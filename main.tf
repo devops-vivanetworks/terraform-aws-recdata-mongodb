@@ -59,7 +59,7 @@ module "recdata_volume_mongodb_01" {
   weekly_retention           = "${var.weekly_retention}"
   monthly_retention          = "${var.monthly_retention}"
   yearly_retention           = "${var.yearly_retention}"
-  volume_additional_tags     = "${var.additional_ebs_tags}"
+  tags     = "${var.additional_ebs_tags}"
 }
 
 module "recdata_volume_mongodb_02" {
@@ -77,7 +77,7 @@ module "recdata_volume_mongodb_02" {
   weekly_retention           = "${var.weekly_retention}"
   monthly_retention          = "${var.monthly_retention}"
   yearly_retention           = "${var.yearly_retention}" 
-  volume_additional_tags     = "${var.additional_ebs_tags}" 
+  tags     = "${var.additional_ebs_tags}" 
 }
 
 module "recdata_volume_mongodb_03" {
@@ -95,7 +95,7 @@ module "recdata_volume_mongodb_03" {
   weekly_retention           = "${var.weekly_retention}"
   monthly_retention          = "${var.monthly_retention}"
   yearly_retention           = "${var.yearly_retention}"
-  volume_additional_tags     = "${var.additional_ebs_tags}"
+  tags     = "${var.additional_ebs_tags}"
 }
 
 
