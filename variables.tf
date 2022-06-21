@@ -90,7 +90,7 @@ variable "ec2_policy_arn" {
 }
 
 variable "additional_ebs_tags" {
-  type        = map(string)
+  type        = "map"
   default     = {}
   description = "The additional ebs tags that will be merged over the default tags"
 }
