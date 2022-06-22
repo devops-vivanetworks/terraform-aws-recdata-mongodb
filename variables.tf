@@ -89,9 +89,3 @@ variable "ec2_policy_arn" {
   description = "EC2 access policy arn to attach to instance profile"
 }
 
-variable "additional_ebs_tags" {
-  type        = "map"
-  default     = {}
-  description = "The additional ebs tags that will be merged over the default tags"
-}
-
